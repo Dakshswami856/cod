@@ -1,0 +1,77 @@
+class Player:
+    def __init__(self, name, role):
+        self.name = name
+        self.role = role
+
+    def __str__(self):
+        return f"{self.name} ({self.role})"
+
+class Team:
+    def __init__(self, name):
+        self.name = name
+        self.players = []
+
+    def add_player(self, player):
+        self.players.append(player)
+
+    def __str__(self):
+        return f"Team {self.name}:\n" + "\n".join(str(player) for player in self.players)
+
+class Field:
+    def __init__(self, name, size):
+        self.name = name
+        self.size = size
+
+    def __str__(self):
+        return f"Field: {self.name}, Size: {self.size} sq meters"
+
+# Create a cricket field
+field = Field("Wankhede Stadium", 45000)
+
+# Create a team
+team = Team("Mumbai Indians")
+
+# Add players to the team
+team.add_player(Player("Rohit Sharma", "Batsman"))
+team.add_player(Player("Jasprit Bumrah", "Bowler"))
+team.add_player(Player("Hardik Pandya", "All-rounder"))
+
+turtle.done()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
